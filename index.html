@@ -16,7 +16,6 @@
 
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
-     <link rel="stylesheet" href="mediaelementplayer.css">
 
     <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -29,6 +28,8 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- Geolocation -->
 
 </head>
 
@@ -213,12 +214,9 @@
                         Door middel van een swipe-beweging kan de gebruiker de potentiële match ‘liken’ of ‘disliken’. Als de ‘like’ wederzijds is, dan is er een ‘match’. De gebruiker kan er nu voor kiezen om te gaan chatten met deze ‘match’ of verder te gaan met ‘swipen’. De doelgroep van Tinder lijkt jongeren te zijn, maar tegenwoordig schijnt Tinder ook aan te slaan bij het oudere publiek (Joossen).
                         <br><br>
 
-                        <iframe type="text/html"
-                        width="640"
-                        height="385"
-                        src="http://www.youtube.com/embed/KLnBoIGqfgQ"
-                        frameborder="0">
+                        <iframe width="640" height="385" src="https://www.youtube.com/embed/KLnBoIGqfgQ?wmode=opaque" frameborder="0">>&nbsp;
                         </iframe>
+
                         <br>
                         <small>Video 1 use case video van Tinder door Tech Report</small>
                         <br><br>
@@ -256,6 +254,58 @@
                         <br><br>
                         <strong>Tinder</strong><br>
                         Tinder is een applicatie die bovenop het Facebook platform is gebouwd. Dat wil zeggen dat Tinder gebruikt maakt van de Facebook  ‘application programming interface’ (API). Van Doorn stelt dat Tinder geen platform kan worden genoemd, omdat alle data gegenereerd wordt vanuit Facebook (van Doorn). Gebruikers worden aan elkaar ‘voorgesteld’ door verbindingen van de sociale netwerk structuren van Facebook. Aan de hand van een zoekopdracht naar Tinder gerelateerde applicaties in appcrawlr.com, zijn we erachter gekomen dat Tinder veel vergelijkbare (of voorafgaande) applicaties kent. Er komen voornamelijk dating applicaties en sociale netwerk applicaties voor waaronder: Grindr, Hot or Not, Badoo en Zoosk. Dit geeft aan dat Tinder wordt geclassificeerd als een intiem en sociaal georiënteerde applicatie. Tinder maakt gebruik van calculaties om mensen aan elkaar ‘voor te stellen’. Deze algoritmische calculaties maken gebruik van ‘user generated content’ (aangeleverd door je Facebook profiel), dat wil zeggen de informatie die de gebruiker ‘aanlevert’ en/of de filter die de gebruiker zelf instelt (leeftijd, geslacht etc.) en de sociale netwerkstructuur van Facebook. Zo stelt een van de respondenten dat dit gebruik van generated content de drempel van de applicatie verlaagt. Zij zegt:””.  Super handig inloggen met Facebook Interview quote zichtbare gebruikers in Tinder. Door de weinig handelingen die nodig zijn op te beginnen met Tinderen en de simpele interface (weinig knoppen en functies) is er sprake van een ‘transparent immediacy’ (Bolter en Grusin). De gebruiker vergeet als het ware bezig te zijn met een interface en gaat op in de content. Ook zijn er respondenten die het hier totaal niet mee eens zijn, waaronder onszelf.!!!!  Naast het feit dat mensen ’aan elkaar voorgesteld’ worden door de wensen (filter) die ze invullen op het platform zelf, door de door henzelf ingevulde profielpagina van Facebook, speelt geolocatie ook een grote rol (GPS).
+                        <br>
+
+                        <div id="google_canvas"></div>
+
+                        <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+
+                        <script>
+                        (function() {
+
+                            if(!!navigator.geolocation) {
+
+                                var map;
+
+                                var mapOptions = {
+                                    zoom: 15,
+                                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                                };
+
+                                map = new google.maps.Map(document.getElementById('google_canvas'), mapOptions);
+
+                                navigator.geolocation.getCurrentPosition(function(position) {
+
+                                    var geolocate = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+                                    var infowindow = new google.maps.InfoWindow({
+                                        map: map,
+                                        position: geolocate,
+                                        content:
+                                            '<h1>Location pinned from HTML5 Geolocation!</h1>' +
+                                            '<h2>Latitude: ' + position.coords.latitude + '</h2>' +
+                                            '<h2>Longitude: ' + position.coords.longitude + '</h2>'
+                                    });
+
+                                    map.setCenter(geolocate);
+
+                                });
+
+                            } else {
+                                document.getElementById('google_canvas').innerHTML = 'No Geolocation Support.';
+                            }
+
+                        })();
+                        </script>
+
+                        <script>
+                        var _gaq=[['_setAccount','UA-20440416-10'],['_trackPageview']];
+                        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                        g.src='//www.google-analytics.com/ga.js';
+                        s.parentNode.insertBefore(g,s)})(document,'script');
+
+                        </script>
+
 
                         <br><br><br>
                         <strong>Swipe, swipe, swipe</strong><br>
@@ -432,10 +482,10 @@
 
     <!-- Map -->
     <section id="contact" class="map">
-        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.nl/maps/@52.3688176,4.8971412,18z?hl=nl"></iframe>
+        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
         <br />
         <small>
-            <a href="https://www.google.nl/maps/@52.3688176,4.8971412,18z?hl=nl"></a>
+            <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
         </small>
         </iframe>
     </section>
